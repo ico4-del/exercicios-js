@@ -7,25 +7,26 @@
 
 export function classificarIdade(idade) {
   if (idade >= 18) {
-    return ('Maior de idade');
+    return ('adulto');
   } else if (idade >= 12) {
-    return ('Adolescente');
+    return ('adolescente');
   } else {
-    return ('Criança');
+    return ('criança');
   }
 }
 
 export function calcularDesconto(preco, percentual) {
-  return (preco * percentual) / 100;
+  const valorDesconto = (preco * percentual) / 100;
+  return preco - valorDesconto;
 }
 
 export function verificarAprovacao(nota) {
   if (nota >= 60) {
-    return ('Aprovado!');
+    return ('aprovado');
   } else if (nota >= 40 && nota < 60) {
-    return ('Recuperação!');
+    return ('recuperação');
   } else {
-    return ('Reprovado!');
+    return ('reprovado');
   }
 }
 
@@ -47,4 +48,4 @@ export function contarLetra(texto, letra) {
     }
   }
   return contador;
-} 
+}
