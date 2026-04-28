@@ -7,7 +7,7 @@
 
 // Exercício 1 — objetoParaJSON
 export function objetoParaJSON(objeto) {
-  // escreva seu código aqui
+  return JSON.stringify(objeto);
 }
 
 // Exercício 2 — jsonParaObjeto
@@ -24,6 +24,7 @@ export function clonarObjeto(objeto) {
 // Função auxiliar — simula uma consulta ao banco que demora 100ms
 // NÃO MEXA nesta função — ela já está pronta
 // ──────────────────────────────────────────────────
+
 function simularConsulta(id) {
   return new Promise((resolve) => {
     setTimeout(() => {
