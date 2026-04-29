@@ -6,18 +6,18 @@
 // Não mexa no arquivo index.test.js.
 
 export function classificarIdade(idade) {
-  if (idade >= 18) {
-    return ('adulto');
-  } else if (idade >= 12) {
-    return ('adolescente');
+  if (idade < 12) {
+    return "criança";
+  } else if (idade >= 12 && idade < 18) {
+    return "adolescente";
   } else {
-    return ('criança');
+    return "adulto";
   }
 }
 
 export function calcularDesconto(preco, percentual) {
-  const valorDesconto = (preco * percentual) / 100;
-  return preco - valorDesconto;
+  const desconto = valor * (percentual / 100);
+  return valor - desconto; 
 }
 
 export function verificarAprovacao(nota) {
@@ -49,3 +49,8 @@ export function contarLetra(texto, letra) {
   }
   return contador;
 }
+
+module.exports = {
+  classificarIdade,
+  calcularDesconto
+};
