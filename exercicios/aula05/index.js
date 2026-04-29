@@ -49,8 +49,3 @@ export function contarLetra(texto, letra) {
   }
   return contador;
 }
-
-module.exports = {
-  classificarIdade,
-  calcularDesconto
-};
